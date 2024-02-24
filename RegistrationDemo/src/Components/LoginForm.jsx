@@ -6,7 +6,7 @@ const LoginForm = () => {
   return (
     <div>
       <form action="" className='login-form'>
-        <h1>Login Page</h1><br />
+        <h1 >Login Page</h1><br />
         <div>
             <label htmlFor="">E-MAIL</label><br />
             <input type="text" name='' id='' placeholder='Enter Your E-Mail' className='login-input'/>

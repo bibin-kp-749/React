@@ -7,6 +7,7 @@ const Inputfield = () => {
   return (
     <div>
       <form action="" className='form'>
+      <h1 >REGISTER</h1><br /><br />
         <div className='fields'>
             <label htmlFor="">NAME:</label><br />
             <input type="text" name="" id="" placeholder='Enter Your Name' className='input'/>

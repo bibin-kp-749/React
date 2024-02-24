@@ -8,7 +8,7 @@ import HomePage from './Pages/HomePage'
 function App() {
 
   return (
-    <>
+  <>
     <Routes>
     <Route path='/' element={<RegistrationPage/>}/>
     <Route path='Login/:id'  element={<LoginPage/>}/>

@@ -55,8 +55,9 @@
 }
 .login-form{
   width: 60vh;
-  height: 60vh;
-  background-color: aqua;
+  height: 66vh;
+  background-color: rgb(19, 25, 31);
+  color: #fff;
   position: relative;
   left: 20vh;
   display: flex;
@@ -66,7 +67,7 @@
   border-radius: 20px;
 }
 .login-input{
-  margin-top: 5px;
+  margin-top: 8px;
   width: 40vh;
   height: 4.9vh;
   border-radius: 5px 5px 5px 5px;
@@ -84,5 +85,18 @@
   background-color: rgb(41, 151, 220);
   color: #fff;
   font-weight: 15px;
+  margin-top: 7px;
 }
-/* hhhh */
+#home-page{
+  width: 100%;
+  height: 100vh;
+  background-image: url('./assets/lap.jpg');
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+}
+.home-heading{
+  color: #fff;
+}
