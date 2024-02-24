@@ -1,9 +1,10 @@
 import React from 'react'
+import LoginForm from '../Components/LoginForm'
 
 function LoginPage() {
   return (
-    <div>
-      
+    <div id='login-page'>
+      <LoginForm/>
     </div>
   )
 }

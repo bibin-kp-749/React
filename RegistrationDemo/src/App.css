@@ -1,42 +1,87 @@
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
+#registration-page{
+  background-image: url('./assets/Plain-Black-Wallpaper.jpg');
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
 }
-
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
+.form{
+  width: 70vh;
+  /* background-color: brown; */
+  height: 70vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  border-radius: 20px;
 }
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
+.fields{
+  margin: 10px;
 }
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+.button{
+  display: flex;
+  justify-content: start;
+  width: 40vh;
+  margin-top: 20px;
 }
-
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.input{
+  margin-top: 10px;
+  width: 40vh;
+  height: 5vh;
+  border-radius: 5px 5px 5px 5px;
+  border-style: none none solid none;
+  border-color: rgb(110, 110, 110);
+  background-color: rgb(30, 30, 30);
+  padding-left: 10px;
+  color: #fff;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
+.submit{
+  width: 13vh;
+  height: 5vh;
+  border-radius: 5px;
+  border: 1px solid black;
+  background-color: rgb(41, 151, 220);
+  color: #fff;
+  font-weight: 15px;
 }
-
-.card {
-  padding: 2em;
+#login-page{
+  width: 100%;
+  height: 100vh;
+  background-image: url('./assets/Plain-Black-Wallpaper.jpg');
+  display:flex ;
+  align-items: center;
 }
-
-.read-the-docs {
-  color: #888;
+.login-form{
+  width: 60vh;
+  height: 60vh;
+  background-color: aqua;
+  position: relative;
+  left: 20vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  border-radius: 20px;
+}
+.login-input{
+  margin-top: 5px;
+  width: 40vh;
+  height: 4.9vh;
+  border-radius: 5px 5px 5px 5px;
+  border-style: none none solid none;
+  border-color: rgb(110, 110, 110);
+  background-color: rgb(30, 30, 30);
+  padding-left: 10px;
+  color: #fff;
+}
+.login-submit{
+  width: 13vh;
+  height: 4.3vh;
+  border-radius: 5px;
+  border: 1px solid rgb(0, 0, 0);
+  background-color: rgb(41, 151, 220);
+  color: #fff;
+  font-weight: 15px;
 }
