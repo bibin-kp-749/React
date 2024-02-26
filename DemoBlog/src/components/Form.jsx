@@ -1,36 +1,40 @@
-import React, { useContext, useState } from 'react'
-import InputField from './InputField'
-import TextareaSizes from './TextareaSizes'
-import Button from '@mui/material/Button';
-import Stack from '@mui/material/Stack';
-import { useNavigate } from 'react-router-dom';
-import { BlogContext } from './BlogContext';
-import BlogCard from './BlogCard';
-import Blogs from '../pages/Blogs';
+import React, { useContext } from 'react'
+import Input from '@mui/joy/Input';
+import Textarea from '@mui/joy/Textarea';
+import Button from '@mui/joy/Button';
+import { Context } from './Context';
 
-function Form() {
-    const navigate=useNavigate()
-    const value=useContext(BlogContext)
-    const EventHandler=()=>{
-      value.setMain([...value.main,{id:Date.now(),heading:value.heading,content:value.content}])
-      console.log(value);
-      navigate('Blog')
-    }
+const Form = () => {
+  const{blogs,setBlogs,heading,setHeading,content,setContent}=useContext(Context)
   return (
     <div>
       <form action="">
-         <InputField/>
-        <TextareaSizes/>
-        <Stack direction="row"  style={{padding:"9px" }}>
-      <Button variant="outlined" style={{width:'20ch'}} onClick={EventHandler}>
-        Primary</Button>
-       </Stack> 
+        <div>
+          <label htmlFor="">Heading</label>
+      <Input placeholder="Type in here…" value={heading} onChange={(event)=>{
+        setHeading(event.target.value)
+      }}/>
+      </div>
+      <div>
+      <Textarea
+          placeholder="Try to submit with no text!"
+          value={content}
+          onChange={event=>{
+            setContent(event.target.value)
+          }}
+          required
+          sx={{ mb: 1 }}
+        />
+      </div>
+      <div>
+      <Button variant="outlined" onClick={()=>{
+        setContent("")
+        setHeading("")
+        setBlogs([...blogs,{heading:heading,content:content}])
+      }}>Submit</Button>
+      </div>
+        
       </form>
-      {/* {
-        value.main.map((e)=>{
-          <Blogs value={value}/>
-        })
-      } */}
     </div>
   )
 }

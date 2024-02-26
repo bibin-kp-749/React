@@ -1,17 +1,11 @@
-import React, { useContext } from 'react'
-import BlogCard from '../components/BlogCard'
-import { BlogContext } from '../components/BlogContext'
+import React from 'react'
+import Cards from '../components/Cards'
 
 const Blogs = () => {
-  const value=useContext(BlogContext)
   return (
-    <>
-    {
-      value.main.map((e)=>{
-        <BlogCard value={{heading:e.heading,content:e.content}}/>  
-      })
-    }
-     </> 
+    <div>
+      <Cards/>
+    </div>
   )
 }
 

@@ -1,27 +1,26 @@
-import './App.css'
-import Blog from './pages/Blog'
-import Blogs from './pages/Blogs'
-import CreateBlog from './pages/CreateBlog'
-import { Route,Routes } from 'react-router-dom'
-import { BlogContext } from './components/BlogContext'
 import { useState } from 'react'
+import './App.css'
+import { Context } from './components/Context'
+import CreateBlog from './pages/CreateBlog'
+import Blogs from './pages/Blogs'
+import { Route,Routes } from 'react-router-dom'
 
 function App() {
-  const [heading,setHeading]=useState("")
+  const[heading,setHeading]=useState("")
   const[content,setContent]=useState("")
-  const [main,setMain]=useState([])
+  const[blogs,setBlogs]=useState([])
+  
 
   return (
     <>
-    <BlogContext.Provider value={{heading,setHeading,content,setContent,main,setMain}}>
+    
+    <Context.Provider value={{heading,setHeading,content,setContent,blogs,setBlogs}}>
     <Routes>
-    <Route path='/' element={<CreateBlog/>}/>
-    <Route path='/Blog' >
-    <Route index element={<Blogs/>}/>
-    <Route path='Blog/:id' element={<Blog/>}/>
-    </Route>
-    </Routes>
-    </BlogContext.Provider>
+      <Route path='/' element={<CreateBlog/>}/>
+      <Route path='/new' element={<Blogs/>}/>
+      </Routes>
+    </Context.Provider>
+    
     </>
   )
 }
