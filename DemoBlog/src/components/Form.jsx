@@ -3,9 +3,12 @@ import Input from '@mui/joy/Input';
 import Textarea from '@mui/joy/Textarea';
 import Button from '@mui/joy/Button';
 import { Context } from './Context';
+import { useNavigate } from 'react-router-dom';
 
 const Form = () => {
   const{blogs,setBlogs,heading,setHeading,content,setContent}=useContext(Context)
+  const navigate=useNavigate()
+  console.log(blogs);
   return (
     <div>
       <form action="">
@@ -30,7 +33,8 @@ const Form = () => {
       <Button variant="outlined" onClick={()=>{
         setContent("")
         setHeading("")
-        setBlogs([...blogs,{heading:heading,content:content}])
+        setBlogs([...blogs,{id:Date.now(),heading:heading,content:content}])
+        navigate('/new')
       }}>Submit</Button>
       </div>
         

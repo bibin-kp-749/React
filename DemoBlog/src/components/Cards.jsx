@@ -2,18 +2,30 @@ import React from 'react'
 import Card from '@mui/joy/Card';
 import CardContent from '@mui/joy/CardContent';
 import Typography from '@mui/joy/Typography';
+import { useContext } from 'react';
+import { Context } from './Context';
 
 
 const Cards = () => {
+  const{blogs}=useContext(Context)
   return (
-    <div>
+    <>
+    {
+      blogs.map((element)=>{
+        return(
+          <div key={element.id}>
       <Card variant="outlined">
         <CardContent>
-          <Typography level="title-md">Plain card</Typography>
-          <Typography>Description of the card.</Typography>
+          <Typography level="title-md">{element.heading}</Typography>
+          <Typography>{element.content}</Typography>
         </CardContent>
       </Card>
     </div>
+        )
+      })
+    }
+    </>
+    
   )
 }
 
