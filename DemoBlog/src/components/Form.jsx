@@ -34,7 +34,7 @@ const Form = () => {
         setContent("")
         setHeading("")
         setBlogs([...blogs,{id:Date.now(),heading:heading,content:content}])
-        navigate('/new')
+        navigate('/blog')
       }}>Submit</Button>
       </div>
         
